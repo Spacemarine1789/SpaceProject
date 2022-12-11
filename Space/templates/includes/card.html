@@ -1,0 +1,15 @@
+<div class="col-md-12 mb-3">
+  <div class="card">
+    <div class="card-header">
+      <h3>Автор: {{ post.author.get_full_name }}</h3>
+    </div>
+    <div class="card-body">
+      {% comment %}
+      <h4 class="card-title">Заголовок записи</h4>
+      {% endcomment %}
+      <h5 class="card-title">{{ post.created|date:"d E Y G:i " }}</h5>
+      <p class="card-text">{{ post.text|truncatechars:30 }}</p>
+      <a href="#" class="btn btn-primary">Подробная информация</a>
+    </div>
+  </div>
+</div>
